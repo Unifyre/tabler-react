@@ -83,9 +83,6 @@
     "shx": "^0.3.2",
     "webpack": "4.19.1"
   },
-  "files": [
-    "dist"
-  ],
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
