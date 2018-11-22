@@ -8753,6 +8753,10 @@ var Dropdown = function (_React$Component) {
       if (o && o.onClick) {
         o.onClick(e);
       }
+
+      if (_this.props.onClick) {
+        _this.props.onClick();
+      }
     }, _this._handleItemClick = function (e, callback) {
       _this.setState({ isOpen: false });
       if (callback) {

@@ -138,6 +138,8 @@ type WithItemsObjectProp = {|
    * itemsObjects[x].RootComponent takes priority
    */
   +itemsRootComponent?: React.ElementType,
+
+  +onClick?: () => void,
 |};
 
 type Props =
@@ -163,6 +165,10 @@ class Dropdown extends React.Component<Props, State> {
     this.setState(s => ({ isOpen: !s.isOpen }));
     if (o && o.onClick) {
       o.onClick(e);
+    }
+
+    if (this.props.onClick) {
+      this.props.onClick();
     }
   };
 
