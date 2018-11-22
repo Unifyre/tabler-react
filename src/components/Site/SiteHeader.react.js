@@ -27,6 +27,7 @@ export type Props = {|
    * Include a notifications tray
    */
   +notificationsTray?: NotificationTrayProps,
+  +notificationsTrayElement?: React.Node,
   +accountDropdown?: AccountDropdownProps,
   +navItems?: React.Node,
   /**
@@ -46,11 +47,13 @@ const SiteHeader = ({
   imageURL,
   alt,
   notificationsTray: notificationsTrayFromProps,
+  notificationsTrayElement,
   accountDropdown: accountDropdownFromProps,
   navItems,
   onMenuToggleClick,
 }: Props): React.Node => {
   const notificationsTray =
+    !notificationsTrayElement &&
     notificationsTrayFromProps &&
     React.createElement(Notification.Tray, notificationsTrayFromProps);
 
@@ -67,7 +70,7 @@ const SiteHeader = ({
               <Site.Logo href={href} alt={alt} src={imageURL} />
               <div className="d-flex order-lg-2 ml-auto">
                 {navItems}
-                {notificationsTray}
+                {notificationsTrayElement || notificationsTray}
                 {accountDropdown}
               </div>
               <a
