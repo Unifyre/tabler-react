@@ -31,6 +31,7 @@ type FormStyle = {|
   +disabled?: boolean,
   +readOnly?: boolean,
   +checked?: boolean,
+  +maxLength?: number,
 |};
 
 export type Props = {|
@@ -67,6 +68,7 @@ function FormInput(props: Props): React.Node {
     placeholder,
     value,
     checked,
+    maxLength,
     onChange,
     onMouseEnter,
     onMouseLeave,
@@ -108,6 +110,7 @@ function FormInput(props: Props): React.Node {
     value,
     disabled,
     readOnly,
+    maxLength,
     onChange,
     onMouseEnter,
     onMouseLeave,
