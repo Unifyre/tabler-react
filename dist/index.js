@@ -6988,7 +6988,8 @@ function FormInput(props) {
       onPaste = props.onPaste,
       disabled = props.disabled,
       readOnly = props.readOnly,
-      label = props.label;
+      label = props.label,
+      style = props.style;
 
   var type = props.type || "text";
 
@@ -7026,7 +7027,8 @@ function FormInput(props) {
     onKeyDown: onKeyDown,
     onCopy: onCopy,
     onCut: onCut,
-    onPaste: onPaste
+    onPaste: onPaste,
+    style: style
   };
 
   var contents = !icon ? React.createElement(

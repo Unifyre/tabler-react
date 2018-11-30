@@ -89,6 +89,7 @@ function FormInput(props: Props): React.Node {
     disabled,
     readOnly,
     label,
+    style,
   } = props;
   const type = props.type || "text";
 
@@ -130,6 +131,7 @@ function FormInput(props: Props): React.Node {
     onCopy,
     onCut,
     onPaste,
+    style,
   };
 
   const contents = !icon ? (
