@@ -7522,7 +7522,8 @@ function FormSelect(props) {
       onMouseLeave = props.onMouseLeave,
       onPointerEnter = props.onPointerEnter,
       onPointerLeave = props.onPointerLeave,
-      onClick = props.onClick;
+      onClick = props.onClick,
+      style = props.style;
 
   var classes = classnames({
     "form-control": true,
@@ -7541,6 +7542,7 @@ function FormSelect(props) {
     React.createElement(
       "select",
       {
+        style: style,
         name: name,
         value: value,
         onChange: onChange,

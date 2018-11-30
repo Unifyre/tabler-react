@@ -55,6 +55,7 @@ function FormSelect(props: Props): React.Node {
     onPointerEnter,
     onPointerLeave,
     onClick,
+    style,
   } = props;
   const classes = cn(
     {
@@ -73,6 +74,7 @@ function FormSelect(props: Props): React.Node {
   const contents = (
     <React.Fragment>
       <select
+        style={style}
         name={name}
         value={value}
         onChange={onChange}
