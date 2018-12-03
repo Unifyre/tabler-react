@@ -44,6 +44,7 @@ const SiteHeader = ({
   children,
   href,
   align,
+  logoElement,
   imageURL,
   alt,
   notificationsTray: notificationsTrayFromProps,
@@ -67,7 +68,7 @@ const SiteHeader = ({
         <div className="d-flex">
           {children || (
             <React.Fragment>
-              <Site.Logo href={href} alt={alt} src={imageURL} />
+              {logoElement || <Site.Logo href={href} alt={alt} src={imageURL} />}
               <div className="d-flex order-lg-2 ml-auto">
                 {navItems}
                 {notificationsTrayElement || notificationsTray}

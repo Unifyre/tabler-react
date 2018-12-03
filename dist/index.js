@@ -10123,6 +10123,7 @@ var SiteHeader = function SiteHeader(_ref) {
   var children = _ref.children,
       href = _ref.href,
       align = _ref.align,
+      logoElement = _ref.logoElement,
       imageURL = _ref.imageURL,
       alt = _ref.alt,
       notificationsTrayFromProps = _ref.notificationsTray,
@@ -10147,7 +10148,7 @@ var SiteHeader = function SiteHeader(_ref) {
         children || React.createElement(
           React.Fragment,
           null,
-          React.createElement(Site.Logo, { href: href, alt: alt, src: imageURL }),
+          logoElement || React.createElement(Site.Logo, { href: href, alt: alt, src: imageURL }),
           React.createElement(
             "div",
             { className: "d-flex order-lg-2 ml-auto" },
