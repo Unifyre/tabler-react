@@ -9391,7 +9391,7 @@ function NavLink(_ref) {
 
   return RootComponent ? React.createElement(
     RootComponent,
-    { className: classes, to: to },
+    { className: classes, to: to, exact: true },
     childrenForAll
   ) : React.createElement(
     "a",

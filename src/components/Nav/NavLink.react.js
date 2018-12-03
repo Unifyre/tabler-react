@@ -38,7 +38,7 @@ function NavLink({
   );
 
   return RootComponent ? (
-    <RootComponent className={classes} to={to}>
+    <RootComponent className={classes} to={to} exact>
       {childrenForAll}
     </RootComponent>
   ) : (

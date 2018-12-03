@@ -9384,7 +9384,7 @@ function NavLink(_ref) {
 
   return RootComponent ? createElement(
     RootComponent,
-    { className: classes, to: to },
+    { className: classes, to: to, exact: true },
     childrenForAll
   ) : createElement(
     "a",
