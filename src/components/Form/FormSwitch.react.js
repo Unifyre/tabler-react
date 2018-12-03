@@ -20,6 +20,7 @@ type Props = {|
   +label?: string | number,
   +value?: string | number,
   +checked?: boolean,
+  +disabled?: boolean,
   +type?: "checkbox" | "radio",
 |};
 
@@ -30,6 +31,7 @@ function FormToggle({
   value,
   label,
   checked,
+  disabled,
   onChange,
   onBlur,
   onFocus,
@@ -48,6 +50,7 @@ function FormToggle({
         value={value}
         className="custom-switch-input"
         checked={checked}
+        disabled={disabled}
         onChange={onChange}
         onBlur={onBlur}
         onClick={onClick}
